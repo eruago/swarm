@@ -6,9 +6,9 @@ services:
         deploy:
             replicas: 5
             placement:
-                constraints: [node.role==<WORKER OR MANAGER>]
+                constraints: [node.role==worker]
         ports:
-            - NumberPort:NumberPort
+            - 3000:8000
         depends_on:
             - db
     db:
